@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/17/about-git/</loc>
+    
+    <lastmod>2019-07-23T09:10:22.309Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/19/Hexo-%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2019-07-23T08:40:51.033Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/11/hello-world/</loc>
+    
+    <lastmod>2019-07-11T09:29:10.454Z</lastmod>
+    
+  </url>
+  
+</urlset>
