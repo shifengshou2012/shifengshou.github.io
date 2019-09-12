@@ -41,6 +41,8 @@
   
   
   
+    <link href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.css" rel="stylesheet">
+  
   
 </head>
 
@@ -116,22 +118,12 @@
         </li>
         
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
             
-            <i class="icon icon-folder"></i>
+            <i class="icon icon-tags"></i>
             
-            <span class="menu-title">分类</span>
-          </a>
-        </li>
-        
-        
-        <li class="menu-item menu-item-repository">
-          <a href="/repository">
-            
-            <i class="icon icon-project"></i>
-            
-            <span class="menu-title">项目</span>
+            <span class="menu-title">标签</span>
           </a>
         </li>
         
@@ -177,7 +169,7 @@
     <div class="widget-body">
         <div id="board">
             <div class="content">
-                <p>Yes,you can do it!</p>
+                <p>Yes, you can do it!</p>
             </div>
         </div>
     </div>
@@ -185,16 +177,6 @@
 
     
       
-
-    
-      
-  <div class="widget">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget-body">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </div>
-
 
     
       
@@ -210,7 +192,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -222,6 +204,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/07/29/ReactHooks/" class="title">React Hooks 研习</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-07-29T02:37:06.000Z" itemprop="datePublished">2019-07-29</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -282,7 +279,7 @@
   	<article class="content article article-archives article-type-list" itemscope="">
 	    <header class="article-header">
 	      <h1 itemprop="title">归档: 2019</h1>
-	      <p class="text-muted">共 3 篇文章</p>
+	      <p class="text-muted">共 4 篇文章</p>
 	    </header>
 	    <div class="article-body">
 	      
@@ -305,6 +302,16 @@
         <div id="collapse2019" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2019">
         <div class="panel-body">
           <div class="collection">
+    
+    
+<a href="/2019/07/29/ReactHooks/" class="collection-item" target="_blank" itemprop="url">
+  <time datetime="2019-07-29T02:37:06.000Z" itemprop="datePublished">2019-07-29</time>
+  <span>&nbsp;&nbsp;&nbsp;</span> React Hooks 研习
+</a>
+
+
+  
+    
     
     
 <a href="/2019/07/19/Hexo-搭建/" class="collection-item" target="_blank" itemprop="url">
@@ -389,6 +396,35 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.js"></script>
+  <script>
+  //利用 FancyBox 实现点击图片放大
+  $(document).ready(function() {
+    $('article img').not('[hidden]').not('.panel-body img').each(function() {
+      var $image = $(this);
+      var imageCaption = $image.attr('alt');
+      var $imageWrapLink = $image.parent('a');
+      if ($imageWrapLink.length < 1) {
+        var src = this.getAttribute('src');
+        var idx = src.lastIndexOf('?');
+        if (idx != -1) {
+          src = src.substring(0, idx);
+        }
+        $imageWrapLink = $image.wrap('<a href="' + src + '"></a>').parent('a');
+      }
+      $imageWrapLink.attr('data-fancybox', 'images');
+      if (imageCaption) {
+        $imageWrapLink.attr('data-caption', imageCaption);
+      }
+    });
+    $().fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+    });
+  });
+  </script>
 
 
 

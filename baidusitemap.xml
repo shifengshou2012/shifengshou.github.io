@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://yoursite.com/2019/07/17/about-git/</loc>
-    <lastmod>2019-07-23</lastmod>
+    <lastmod>2019-09-10</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/07/29/ReactHooks/</loc>
+    <lastmod>2019-07-30</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/07/19/Hexo-%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2019-07-23</lastmod>
+    <lastmod>2019-07-24</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/07/11/hello-world/</loc>
     <lastmod>2019-07-11</lastmod>

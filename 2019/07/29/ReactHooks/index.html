@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>about git | 学习手札</title>
-  <meta name="description" content="平时很少用git，整理一些git的命令，备忘 几个仓库本地开发仓库---add---&amp;gt;  本地仓库（Index)  ---commit---&amp;gt;本地仓库（Head）---push---&amp;gt;远程仓库git initgit init 初始化一个仓库git addgit add . 向本地仓库(Index区)添加所有改动过的文件； git add -p 向本地仓库(Index区)添加单个改">
-<meta name="keywords" content="工具,总结">
+  <title>React Hooks 研习 | 学习手札</title>
+  <meta name="description" content="什么是 react hooks，它解决了什么问题简单讲，hooks解决的是状态共享问题，它提供了一种更简洁优雅的写法； hooks包括了useState、useEffect、useContext、useReducer、useCallback、useMemo、useRef、useImperativeMethods、useMutationEffect、useLayoutEffect等；useState">
+<meta name="keywords" content="前端,react">
 <meta property="og:type" content="article">
-<meta property="og:title" content="about git">
-<meta property="og:url" content="http://yoursite.com/2019/07/17/about-git/index.html">
+<meta property="og:title" content="React Hooks 研习">
+<meta property="og:url" content="http://yoursite.com/2019/07/29/ReactHooks/index.html">
 <meta property="og:site_name" content="学习手札">
-<meta property="og:description" content="平时很少用git，整理一些git的命令，备忘 几个仓库本地开发仓库---add---&amp;gt;  本地仓库（Index)  ---commit---&amp;gt;本地仓库（Head）---push---&amp;gt;远程仓库git initgit init 初始化一个仓库git addgit add . 向本地仓库(Index区)添加所有改动过的文件； git add -p 向本地仓库(Index区)添加单个改">
+<meta property="og:description" content="什么是 react hooks，它解决了什么问题简单讲，hooks解决的是状态共享问题，它提供了一种更简洁优雅的写法； hooks包括了useState、useEffect、useContext、useReducer、useCallback、useMemo、useRef、useImperativeMethods、useMutationEffect、useLayoutEffect等；useState">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-10T06:01:02.605Z">
+<meta property="og:updated_time" content="2019-07-30T01:23:59.652Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about git">
-<meta name="twitter:description" content="平时很少用git，整理一些git的命令，备忘 几个仓库本地开发仓库---add---&amp;gt;  本地仓库（Index)  ---commit---&amp;gt;本地仓库（Head）---push---&amp;gt;远程仓库git initgit init 初始化一个仓库git addgit add . 向本地仓库(Index区)添加所有改动过的文件； git add -p 向本地仓库(Index区)添加单个改">
+<meta name="twitter:title" content="React Hooks 研习">
+<meta name="twitter:description" content="什么是 react hooks，它解决了什么问题简单讲，hooks解决的是状态共享问题，它提供了一种更简洁优雅的写法； hooks包括了useState、useEffect、useContext、useReducer、useCallback、useMemo、useRef、useImperativeMethods、useMutationEffect、useLayoutEffect等；useState">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yoursite.com/2019/07/17/about-git/index.html">
+  <link rel="canonical" href="http://yoursite.com/2019/07/29/ReactHooks/index.html">
   
     <link rel="alternate" href="/atom.xml" title="学习手札" type="application/atom+xml">
   
@@ -276,25 +276,16 @@
 
   
   
-<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
-  <div class="slimContent">
-    <nav id="toc" class="article-toc">
-      <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#几个仓库"><span class="toc-number">1.</span> <span class="toc-text">几个仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-init"><span class="toc-number">2.</span> <span class="toc-text">git init</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-add"><span class="toc-number">3.</span> <span class="toc-text">git add</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-rm"><span class="toc-number">4.</span> <span class="toc-text">git rm</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-commit"><span class="toc-number">5.</span> <span class="toc-text">git commit</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-push"><span class="toc-number">6.</span> <span class="toc-text">git push</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-remote"><span class="toc-number">7.</span> <span class="toc-text">git remote</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-branch"><span class="toc-number">8.</span> <span class="toc-text">git branch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-checkout"><span class="toc-number">9.</span> <span class="toc-text">git checkout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-pull"><span class="toc-number">10.</span> <span class="toc-text">git pull</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-merge"><span class="toc-number">11.</span> <span class="toc-text">git merge</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-diff"><span class="toc-number">12.</span> <span class="toc-text">git diff</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-status"><span class="toc-number">13.</span> <span class="toc-text">git status</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-stash"><span class="toc-number">14.</span> <span class="toc-text">git stash</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-merge-1"><span class="toc-number">15.</span> <span class="toc-text">git merge</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-tag"><span class="toc-number">16.</span> <span class="toc-text">git tag</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-log"><span class="toc-number">17.</span> <span class="toc-text">git log</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git"><span class="toc-number">18.</span> <span class="toc-text">git</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他情况"><span class="toc-number"></span> <span class="toc-text">其他情况</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、git-commit"><span class="toc-number">1.</span> <span class="toc-text">1、git commit</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、gitk-内建的图形化的git"><span class="toc-number">2.</span> <span class="toc-text">2、gitk 内建的图形化的git</span></a></li></ol>
-    </nav>
-  </div>
-</aside>
-
 <main class="main" role="main">
   <div class="content">
-  <article id="post-about-git" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-ReactHooks" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      about git
+      React Hooks 研习
     </h1>
   
 
@@ -302,17 +293,12 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2019/07/17/about-git/" class="article-date">
-	  <time datetime="2019-07-17T06:11:30.000Z" itemprop="datePublished">2019-07-17</time>
+	<a href="/2019/07/29/ReactHooks/" class="article-date">
+	  <time datetime="2019-07-29T02:37:06.000Z" itemprop="datePublished">2019-07-29</time>
 	</a>
 </span>
         
         
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/工具/">工具</a>, <a class="article-tag-link" href="/tags/总结/">总结</a>
-  </span>
-
 
         
 	<span class="article-read hidden-xs">
@@ -323,51 +309,36 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/07/17/about-git/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/07/29/ReactHooks/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>平时很少用git，整理一些git的命令，备忘</p>
-<h4 id="几个仓库"><a href="#几个仓库" class="headerlink" title="几个仓库"></a>几个仓库</h4><pre><code>本地开发仓库---add---&gt;  本地仓库（Index)  ---commit---&gt;本地仓库（Head）---push---&gt;远程仓库</code></pre><h4 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h4><pre><code>git init 初始化一个仓库</code></pre><h4 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h4><pre><code>git add . 向本地仓库(Index区)添加所有改动过的文件；
-git add -p 向本地仓库(Index区)添加单个改动过的文件；（有后续命令, 循环遍历）
-git add -i 交互式添加文件到暂存区；
-git add * 向本地仓库(Index区)添加所有文件
-git add -f fileName 强行添加（可以添加.gitignore中的文件）
-备注：本地仓库由三部分组成，1、工作目录；2、暂存区（Index）；3、实际提交目录（Head);</code></pre><h4 id="git-rm"><a href="#git-rm" class="headerlink" title="git rm"></a>git rm</h4><pre><code>git rm -cached ‘文件路径’ 不删除物理文件，仅仅将文件从缓存区删除；
-git rm -f ‘文件路径’ 不仅讲该文件从缓存中删除，同时删除物理文件；</code></pre><h4 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h4><pre><code>git commit -m &apos;message&apos;;  提交代码至本地Head区
-^HEAD 上一个版本；
-^^HEAD 上上一个版本；</code></pre><h4 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h4><pre><code>git push origin master   推送至远程仓库，可以将master替换为任何一个分支名
-git push -u origin master 第一次推送master分支的所有内容</code></pre><h4 id="git-remote"><a href="#git-remote" class="headerlink" title="git remote"></a>git remote</h4><pre><code>git remote add origin &lt;server&gt;  将本地改动推送到所添加的服务器上
-git remote add origin git@server-name：path/。。。  关联一个远程库</code></pre><h4 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h4><pre><code>git branch 列出所有本地分支，*号代表当前HEAD指向的分支
-git branch -r 列出所有远程分支
-git branch -a 列出所有本地分支和远程分支；
-git branch branchName 创建分支
-git branch -d branchName 将分支名为branchName的分支删除；</code></pre><h4 id="git-checkout"><a href="#git-checkout" class="headerlink" title="git checkout"></a>git checkout</h4><pre><code>git checkout -b branchName  创建一个叫做branchName的分支，并切换；
-git checkout master 切换为主分支；
-git checkout fileName 将Index区中的文件覆盖掉本地的改动；
-    git rm fileName将本地以及Index区中的文件删除；
-git reset HEAD fileName 将HEAD区中的文件覆盖掉Index区的文件；
-    备注：git fetch origin &amp;&amp;git reset --hard origin/master 丢弃本地所有的改动和提交，从服务器获取最新的版本历史，并将本地主分支指向它；</code></pre><h4 id="git-pull"><a href="#git-pull" class="headerlink" title="git pull"></a>git pull</h4><pre><code>git pull 更新代码;</code></pre><h4 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h4><pre><code>git merge branchName 合并分支；
-备注：如果文件冲突，需要重新使用 git add fileName 提交；</code></pre><h4 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h4><pre><code>git diff source_branch target_branch 比较两个分支之间的差异</code></pre><h4 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h4><pre><code>git status 查看仓库各个文件状态；</code></pre><h4 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h4><pre><code>git stash 将冲突文件缓存</code></pre><h4 id="git-merge-1"><a href="#git-merge-1" class="headerlink" title="git merge"></a>git merge</h4><pre><code>git merge branchName 分支合并
-    备注，add-commit-push-merge</code></pre><h4 id="git-tag"><a href="#git-tag" class="headerlink" title="git tag"></a>git tag</h4><pre><code>git tag 查看所有提交的tag
-git tag 1.0.0 1b2e1d63ff 创建一个1.0.0的标签，后面的提交字符代表提交Id的前10位，可通过git log 查看提交Id；
-git tag -a 1.0.0 -m &apos;my version 1.0.0&apos;    创建一个包含附注的标签；
-git show 1.0.0 查看该标签的内容说明以及提交；
-git push origin 1.0.0 将该标签推送到远程仓库；
-git push origin --tags 将所有标签推送到远程仓库；
-git tag -d 1.0.0 删除本地标签；
-git push origin --delete 1.0.0 删除远程仓库标签；</code></pre><h4 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h4><pre><code>git log 查看本地仓库的历史记录；
-git log --author=jack，只查看jack的提交记录
-git log --pretty=oneline ，一个压缩后的每一条提交记录只占一行的输出；
-git log --graph --oneline --decorate --all 通过ASCII的树形机构战士所有的分支，每个分支都标注名字和标签；
-git log --name-status 查看哪个文件发生了变化；
-git log --help  查看帮助；</code></pre><h4 id="git"><a href="#git" class="headerlink" title="git"></a>git</h4><pre><code>git ls-files 查看Index区文件；</code></pre><h3 id="其他情况"><a href="#其他情况" class="headerlink" title="其他情况"></a>其他情况</h3><h4 id="1、git-commit"><a href="#1、git-commit" class="headerlink" title="1、git commit"></a>1、git commit</h4><pre><code>输入命令后，进入到文本编辑模式；
-输入i 进行编辑（添加提交备注）；
-点击esc退出编辑；
-输入：wq，完全退出；</code></pre><h4 id="2、gitk-内建的图形化的git"><a href="#2、gitk-内建的图形化的git" class="headerlink" title="2、gitk 内建的图形化的git"></a>2、gitk 内建的图形化的git</h4><pre><code>git config color.ui true 彩色的git输出；
-git config format.pretty oneline 设置每次提交信息只展示一行；</code></pre>
+        <h4 id="什么是-react-hooks，它解决了什么问题"><a href="#什么是-react-hooks，它解决了什么问题" class="headerlink" title="什么是 react hooks，它解决了什么问题"></a>什么是 react hooks，它解决了什么问题</h4><pre><code>简单讲，hooks解决的是状态共享问题，它提供了一种更简洁优雅的写法；
+hooks包括了useState、useEffect、useContext、useReducer、useCallback、useMemo、useRef、useImperativeMethods、useMutationEffect、useLayoutEffect等；</code></pre><h4 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h4><pre><code>useState等出现，使得所有的react组件，都可以用无状态组件来写
+写法：
+<figure class="highlight javascript"><figcaption><span>example.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useState &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Example</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> [age, setAge] = useState(<span class="number">18</span>);</span><br><span class="line">    <span class="keyword">const</span> [name, setName] = useState(<span class="string">'WangLaoBan'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;p&gt;&#123;name&#125;的年龄是&#123;age&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">        &lt;button onClick=&#123;() =&gt; setAge(age+1)&#125;&gt;长大&lt;/</span>button&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+解析：
+本例中，ueseState接受一个参数作为初始值，然后返回一个数组，数组第一项为state等名字，第二项为state等设置方法；
+
+注意：
+- 与setState不同的是，setState返回一个合并的状态，而useState是新状态直接覆盖老状态；
+- 每一个useState都是相对独立等，react根据useState出现等顺序来判断对应等key值，建议讲hooks写在函数等最外层，严禁将hooks写在 if else 语句中。</code></pre><h4 id="useEffect"><a href="#useEffect" class="headerlink" title="useEffect"></a>useEffect</h4><pre><code>useEffect = componentDidMount + componentDidUpdate + componentWillUnmount
+useEffect 相当于上面几个生命周期函数的结合体，我们看一下怎么用，
+写法：
+<figure class="highlight javascript"><figcaption><span>example.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useState, useEffect&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Example</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> [age, setAge] = useState(<span class="number">18</span>);</span><br><span class="line">    <span class="keyword">const</span> [name, setName] = useState(<span class="string">'WangLaoBan'</span>);</span><br><span class="line"></span><br><span class="line">    useEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        bind(age)；</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">clean</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, [age])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;p&gt;&#123;name&#125;的年龄是&#123;age&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">        &lt;button onClick=&#123;() =&gt; setAge(age+1)&#125;&gt;长大&lt;/</span>button&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+解析：
+- 这个例子中，在Example中使用了useEffect，它需要两个参数，第一参数是函数Func，第二参数是监听数组Arr;
+- 如果传入第一个参数，每次组件渲染时候都会执行，上面等clean函数，第一次只执行bind(),第二次以后，每次都先执行clean(),再执行bind()；
+— 如果传入了第二个参数，那么只有监听数组中的值发生变化时候，才执行第一参数函数；
+
+注意：
+— 如果第二参数传入了一个空数组[]，那么第一个参数函数只在初始化时候执行一次；
+- useEffect是异步的，而</code></pre><h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p><a href="https://juejin.im/post/5be3ea136fb9a049f9121014#heading-13；" target="_blank" rel="noopener">https://juejin.im/post/5be3ea136fb9a049f9121014#heading-13；</a></p>
+
       
     </div>
     <div class="article-footer">
@@ -376,7 +347,7 @@ git config format.pretty oneline 设置每次提交信息只展示一行；</cod
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2019/07/17/about-git/" title="about git" target="_blank" rel="external">http://yoursite.com/2019/07/17/about-git/</a>
+      <a href="http://yoursite.com/2019/07/29/ReactHooks/" title="React Hooks 研习" target="_blank" rel="external">http://yoursite.com/2019/07/29/ReactHooks/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -424,24 +395,11 @@ git config format.pretty oneline 设置每次提交信息只展示一行；</cod
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2019/07/19/Hexo-搭建/" title="Hexo 搭建"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2019/07/11/hello-world/" title="Hello World"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2019/07/19/Hexo-搭建/" title="Hexo 搭建"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
-    
-    <li class="toggle-toc">
-      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
-        <span>[&nbsp;</span><span>文章目录</span>
-        <i class="text-collapsed icon icon-anchor"></i>
-        <i class="text-in icon icon-close"></i>
-        <span>]</span>
-      </a>
-    </li>
     
   </ul>
   
@@ -564,9 +522,9 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     <script defer>
     var disqus_config = function () {
         
-            this.page.url = 'http://yoursite.com/2019/07/17/about-git/';
+            this.page.url = 'http://yoursite.com/2019/07/29/ReactHooks/';
         
-        this.page.identifier = 'about-git';
+        this.page.identifier = 'ReactHooks';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
